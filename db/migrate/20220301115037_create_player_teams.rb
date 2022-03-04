@@ -1,4 +1,4 @@
-class PlayerTeams < ActiveRecord::Migration[6.1]
+class CreatePlayerTeams < ActiveRecord::Migration[6.1]
   def change
     create_table :player_teams do |t|
       t.integer :player_id

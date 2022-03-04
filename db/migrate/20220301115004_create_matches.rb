@@ -1,4 +1,4 @@
-class Matches < ActiveRecord::Migration[6.1]
+class CreateMatches < ActiveRecord::Migration[6.1]
   def change
     create_table :matches do |t|
       t.integer :result_id
