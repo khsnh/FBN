@@ -1,4 +1,4 @@
-class MatchAwards < ActiveRecord::Migration[6.1]
+class CreateMatchAwards < ActiveRecord::Migration[6.1]
   def change
     create_table :match_awards do |t|
       t.string :title
