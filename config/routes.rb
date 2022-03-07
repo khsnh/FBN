@@ -7,4 +7,11 @@ Rails.application.routes.draw do
     post "signin" => "devise/sessions#create"
     delete "signout" => "devise/sessions#destroy"
   end
+
+  devise_for :admins
+  namespace :admin do
+    root "dash_board#index"
+    resources :dash_board, only: :index
+  end
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

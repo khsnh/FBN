@@ -7,22 +7,11 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-import "../stylesheets/application.scss"
-import "bootstrap"
-import "./jquery.ticker.js"
-import "./site.js"
+import "../stylesheets/admin.scss"
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-const images = require.context('../images', true)
-
-$(document).on("turbolinks:load",function(){
-  if($("#js-news").length > 0){
-    $('#js-news').ticker();
-  }
-})
-
-// app/javas
-// app/javascript/packs/application.js
+require('admin-lte');
+import "@fortawesome/fontawesome-free/js/all";
